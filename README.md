@@ -28,7 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
+![ds](https://user-images.githubusercontent.com/75596989/156615985-53c057d3-3800-4c8b-abed-e84d2ef18e93.PNG)
 
+![mb](https://user-images.githubusercontent.com/75596989/156616004-e0983215-5c2d-4239-9175-6434a1aa80b1.PNG)
 
 ### Links
 
@@ -56,7 +58,7 @@ I will continue training:
 
 ### Useful resources
 
-- [Example resource 1](https://react-redux.js.org/)
+- [React Redux](https://react-redux.js.org/)
 
 ## Author
 
@@ -68,4 +70,4 @@ I will continue training:
 
 I want to thank professor Fernando Herrera because his course of react let me learn a lot!
 
-course: https://www.udemy.com/course/react-cero-experto/
+Course: https://www.udemy.com/course/react-cero-experto/

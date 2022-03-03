@@ -1,13 +1,351 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --Very-dark-cyan: #00474B;
+  --Dark-grayish-cyan-2: #6D8683;
+  --Dark-grayish-cyan-1: hsl(184, 14%, 56%);
+  --Light-grayish-cyan-2: #9FE8DF;
+  --Light-grayish-cyan-1: #F3F8FB;
+  --White: hsl(0, 0%, 100%);
+  --bolder: 600;
+  --bold: 500;
+  --normal: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+
+body, html {
+  margin: 0;
+  background-color: var(--Light-grayish-cyan-2);
+  font-family: 'Space Mono', monospace;
+}
+
+.index-app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.calculato-app {
+  background-color: var(--White);
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 70rem;
+}
+
+/* opcion de pago */
+
+.opciones-de-pago {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+}
+
+
+.opciones-de-pago__select-tip {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+}
+
+.opciones-de-pago__select-tip--button {
+  display: flex;
+
+}
+
+.opciones-de-pago__select-tip--buton-group {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.opciones-de-pago__select-tip--buton-group button{
+  height: 3.125rem;
+  width: 8rem;
+  font-size: 1.5rem;
+  font-weight: var(--bolder);
+  color: var(--White);
+  background-color: var(--Very-dark-cyan);
+  border-radius: .5rem;
+  border: 0 ;
+  transition: all .2s;
+}
+
+.opciones-de-pago__select-tip--buton-group button:hover{
+  
+  
+  color: var(--Very-dark-cyan);
+  background-color: var(--Light-grayish-cyan-2);
+  border-radius: .5rem;
+}
+
+.opciones-de-pago__select-tip--buton-group--input{
+  height: 3.125rem;
+  width: 8rem;
+  border-radius: .5rem;
+  border: .2rem transparent solid;
+  background-color: var(--Light-grayish-cyan-1);
+  font-size: 1.5rem;
+  font-weight: var(--bolder);
+  color: var(--Very-dark-cyan);
+  text-align: center;
+  transition: all .5s;
+}
+
+.opciones-de-pago__select-tip--buton-group--input::placeholder{
+  color: var(--Dark-grayish-cyan-2);
+}
+
+.opciones-de-pago__select-tip--buton-group--input:focus{
+  outline: none;
+  border: .2rem var(--Light-grayish-cyan-2) solid;
+  background-color: white;
+}
+
+.input-button-invalid {
+  height: 3.125rem;
+  width: 8rem;
+  border-radius: .5rem;
+  background-color: var(--Light-grayish-cyan-1);
+  font-size: 1.5rem;
+  border: .2rem rgba(251, 58, 58, 0.719) solid ;
+  font-weight: var(--bolder);
+  color: var(--Very-dark-cyan);
+  text-align: center;
+  transition: all .5s;
+}
+
+
+.input-button-invalid::placeholder{
+  color: var(--Dark-grayish-cyan-2);
+}
+
+.input-button-invalid:focus{
+  outline: none;
+  background-color: white;
+}
+
+.mx {
+  margin: .5rem .5rem;
+}
+
+.ml {
+  margin: .5rem 0 .5rem .5rem;
+}
+
+.mr {
+  margin: .5rem .5rem .5rem 0;
+}
+
+
+.opciones-de-pago__number-people {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.opciones-de-pago__number-people--input_i {
+  height: 3.25rem;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: var(--bolder);
+  color: var(--Very-dark-cyan);
+  border-radius: .5rem;
+  border: .2rem transparent solid ;
+  background-color: var(--Light-grayish-cyan-1);
+  padding: .75rem;
+  transition: all .5s;
+  position: relative;
+
+}
+
+.opciones-de-pago__number-people--input_i:focus {
+  outline: none;
+  border: .2rem var(--Light-grayish-cyan-2) solid;
+  background-color: white;
+}
+
+.opciones-de-pago__number-people--input_i::placeholder{
+  color: var(--Dark-grayish-cyan-2);
+}
+
+.bill-label-color {
+  color: var(--Very-dark-cyan);
+  font-weight: var(--normal);
+}
+
+.input-icon {
+  color: #191919;
+  position: relative;
+  bottom: 28px;
+  left: 10px;
+  width: 1rem;
+  transform: translateY(-50%);
+}
+
+
+.is-invalid {
+  height: 3.25rem;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: var(--bolder);
+  color: var(--Very-dark-cyan);
+  border-radius: .5rem;
+  border: .2rem rgba(251, 58, 58, 0.719) solid ;
+  background-color: var(--Light-grayish-cyan-1);
+  padding: .75rem;
+  transition: all .5s;
+  position: relative;
+}
+
+.is-invalid:focus {
+  outline: none;
+  background-color: white;
+}
+
+.is-invalid::placeholder{
+  color: var(--Dark-grayish-cyan-2);
+}
+
+
+
+
+/* total */
+
+.total {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  justify-content: space-between;
+}
+
+.tip-box{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.tip-box__info{
+  margin: auto 0;  
+}
+
+.tip-box__info p {
+  font-size: 1.2rem;
+  color: var(--White);
+  margin: 0;
+}
+
+.tip-box__info span {
+  color: var(--Dark-grayish-cyan-1);
+}
+
+.tip-box__amount{
+  margin: auto 0;  
+  font-size: 4rem;
+  color: var(--Light-grayish-cyan-2);
+}
+
+.reset--buton {
+  height: 3rem;
+  font-weight: var(--bolder);
+  font-size: 1.4rem;
+  border-radius: .5rem;
+  color: var(--Light-grayish-cyan-2);
+  background-color: transparent;
+  border: .2rem var(--Light-grayish-cyan-2) solid;
+  transition: all .3s;
+}
+
+.reset--buton:hover {
+
+  
+
+  color: var(--Very-dark-cyan);
+  border: .2rem transparent solid;
+  background-color: var(--Light-grayish-cyan-2);
+
+
+} 
+
+
+
+
+
+
+
+@media (max-width: 375px) { 
+
+  .calculato-app {
+    flex-direction: column;
+    width: 100vw;
+
+  }
+
+  .opciones-de-pago {
+    width: 80vw;
+  }
+
+  .opciones-de-pago__select-tip--buton-group {
+    width: 80vw;
+    gap: 1rem;
+  }
+
+  .mx {
+    margin: 0rem .0rem;
+  }
+  
+  .ml {
+    margin: .0rem 0 .0rem .0rem;
+  }
+  
+  .mr {
+    margin: .0rem .0rem .0rem 0;
+  }
+
+  .total {
+    width: 80vw;
+    padding: 1.2rem;
+  }
+
+  .tip-box__amount {
+    font-size: 2.5rem;
+  }
+
+  .reset--buton{
+    margin-top: 1rem;
+  }
+
+  .calculato-app {
+    margin-top: auto;
+  }
+
+  .tip-box__info p{
+    font-size: 1rem;
+  }
+
+  .tip-box__info span{
+    font-size: .8rem;
+  }
+
+
+
 }
